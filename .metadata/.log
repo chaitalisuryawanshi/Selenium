@@ -69,3 +69,127 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.eclipse.m2e.logback.appender 2 0 2023-02-02 18:01:39.498
 !MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2023-02-02 18:02:49.429
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: HTTP Server Unknown HTTP Response Code (308):http://dl.bintray.com/testng-team/testng-p2-release/content.xml
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.createCache(CacheManager.java:247)
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.getLocalFile(SimpleMetadataRepositoryFactory.java:69)
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.load(SimpleMetadataRepositoryFactory.java:89)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:775)
+	at jdk.internal.reflect.GeneratedMethodAccessor77.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:119)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:423)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:214)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:495)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.doLoad(LoadMetadataRepositoryJob.java:126)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.runModal(LoadMetadataRepositoryJob.java:110)
+	at org.eclipse.equinox.internal.p2.ui.sdk.PreloadingRepositoryHandler$1.runModal(PreloadingRepositoryHandler.java:84)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:188)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.ecf.filetransfer.BrowseFileTransferException: HttpComponents connection error response code 308.
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:278)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:71)
+	... 1 more
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2023-02-02 18:02:49.432
+!MESSAGE HTTP Server Unknown HTTP Response Code (308):http://dl.bintray.com/testng-team/testng-p2-release/content.xml
+!STACK 1
+org.eclipse.ecf.filetransfer.BrowseFileTransferException: HttpComponents connection error response code 308.
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:278)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:71)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 2 org.eclipse.ecf.identity 4 0 2023-02-02 18:02:49.432
+!MESSAGE HttpComponents connection error response code 308.
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2023-02-02 18:03:15.659
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: No repository found at http://download.eclipse.org/technology/m2e/releases/.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:396)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:119)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.fail(CachingRepositoryManager.java:367)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:258)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:495)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.doLoad(LoadMetadataRepositoryJob.java:126)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.runModal(LoadMetadataRepositoryJob.java:110)
+	at org.eclipse.equinox.internal.p2.ui.sdk.PreloadingRepositoryHandler$1.runModal(PreloadingRepositoryHandler.java:84)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:188)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2023-02-02 18:03:15.660
+!MESSAGE No repository found at http://download.eclipse.org/technology/m2e/releases/.
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2023-02-02 18:03:18.870
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: No repository found at https://dl.bintray.com/testng-team/testng-eclipse-release/6.14.3/.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:396)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:119)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.fail(CachingRepositoryManager.java:367)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:258)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:495)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.doLoad(LoadMetadataRepositoryJob.java:126)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.runModal(LoadMetadataRepositoryJob.java:110)
+	at org.eclipse.equinox.internal.p2.ui.sdk.PreloadingRepositoryHandler$1.runModal(PreloadingRepositoryHandler.java:84)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:188)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2023-02-02 18:03:18.870
+!MESSAGE No repository found at https://dl.bintray.com/testng-team/testng-eclipse-release/6.14.3/.
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2023-02-02 18:03:26.394
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: No repository found at http://beust.com/eclipse.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:396)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:119)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.fail(CachingRepositoryManager.java:367)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:258)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:495)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.doLoad(LoadMetadataRepositoryJob.java:126)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.runModal(LoadMetadataRepositoryJob.java:110)
+	at org.eclipse.equinox.internal.p2.ui.sdk.PreloadingRepositoryHandler$1.runModal(PreloadingRepositoryHandler.java:84)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:188)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2023-02-02 18:03:26.395
+!MESSAGE No repository found at http://beust.com/eclipse.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-02-02 18:06:01.136
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-02-02 18:06:01.140
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-02-02 18:06:09.206
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-02-02 18:06:09.223
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-02-02 18:06:14.747
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-02-02 18:06:14.754
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
